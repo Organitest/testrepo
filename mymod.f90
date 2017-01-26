@@ -1,11 +1,8 @@
 !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%!
-program main
+module mymod
 
-  use mymod, only: intnum
   implicit none
+  integer :: intnum
 
-  intnum = 1
-  print*,'this is how I roll and I say: ',intnum
-
-end program
+end module
 !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%!

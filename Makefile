@@ -1,15 +1,21 @@
+################################################################################
 FC = gfortran
 FFLAGS =
 LFLAGS =
 
-all : main
+all : main.x
 
-main : main.o
+main.x: main.o mymod.o
 	$(FC) $(LFLAGS) $^ $(LIBS) -o $@
 
-%.o : %.f90
+%.o   : %.f90 mymod.mod
 	$(FC) $(FFLAGS) -c $< -o $@
+
+%.mod : %.f90
+	$(FC) $(FFLAGS) -c $< -o $(@:%.mod=%.o)
+	@touch $@
 
 .PHONY: clean
 clean :
-	rm -rf main main.o
+	rm -rf main.x main.o mymod.o mymod.mod
+################################################################################
