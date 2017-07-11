@@ -6,7 +6,8 @@ program main
 ! a comment
 
   intnum = 1
-  print*,'this is how I roll and I say: ',intnum
+  print*,'This is how I roll and I say: ',intnum
+  print*,'I am adding this writing.'
 
 end program
 !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%!
