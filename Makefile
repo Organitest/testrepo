@@ -18,4 +18,8 @@ main.x: main.o mymod.o
 .PHONY: clean
 clean :
 	rm -rf main.x main.o mymod.o mymod.mod
+
+.PHONY: me-happy
+mehappy:
+	@echo "Hello handsome ;)"
 ################################################################################
